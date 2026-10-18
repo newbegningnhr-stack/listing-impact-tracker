@@ -269,7 +269,7 @@ def main():
 
     added = 0
     days = min(BACKFILL_DAYS, 30) if BACKFILL_DAYS > 0 else 1
-    for item in Client().listings(days=days):
+    for item in Client().listings(days=days, limit=500):
         key = item.permalink
         if key in seen or not item.symbols:
             continue
