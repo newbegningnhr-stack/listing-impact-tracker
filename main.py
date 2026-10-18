@@ -268,7 +268,7 @@ def main():
     BTC = btc_series()
 
     added = 0
-    days = min(BACKFILL_DAYS, 30) if BACKFILL_DAYS > 0 else 1
+    days = min(BACKFILL_DAYS, 90) if BACKFILL_DAYS > 0 else 1
     listed = Client().listings(days=days, limit=500)
     print(f"Tokenearly se mile: {len(listed)} | pehle se seen: {len(seen)}")
     for item in listed:
